@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /*
     When site is first visited, cart is empty
@@ -23,6 +24,7 @@ public class CartTest {
 
         // Execute + Assert
         assertEquals(0, cart.getSize(), "cart should be empty");
+        assertNotEquals(3, cart.getSize());
     }
 
     // 2nd test:

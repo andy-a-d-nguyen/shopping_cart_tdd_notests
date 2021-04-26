@@ -2,10 +2,6 @@ package com.galvanize.cart;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
@@ -114,9 +110,8 @@ public class CartTest {
     @Test
     public void printUpdatedQuantityTest() {
         // Setup:
-//        Cart cart = new Cart("Test");
         Item chips = new Item("chips", 3, 1, false);
-//        cart.addItem(chips);
+
         String expected = "There are now 4 chips";
         // Execute:
         String result = chips.updateQuantity(4);

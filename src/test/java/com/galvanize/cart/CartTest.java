@@ -108,6 +108,22 @@ public class CartTest {
         // Assert:
         assertEquals(4, eggs.itemQuantity, "should have updated quantity");
     }
+
+    @Test
+    public void printUpdatedQuantityTest() {
+        // Setup:
+//        Cart cart = new Cart("Test");
+        Item chips = new Item("chips", 3, 1, false);
+//        cart.addItem(chips);
+        String expected = "There are now 4 chips";
+        // Execute:
+        String result = chips.updateQuantity(4);
+
+        // Assert:
+        assertEquals(expected, result, "should have updated quantity");
+    }
+
+
     // 6th test:
     // Check to see if items on sale matches
     // expected list of items on sale

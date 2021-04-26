@@ -3,12 +3,28 @@
  */
 package com.galvanize;
 
+import com.galvanize.cart.Cart;
+import com.galvanize.cart.Item;
+
 public class App {
     public String getGreeting() {
         return "Hello world.";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        // System.out.println(new App().getGreeting());
+                Cart cart = new Cart("Test");
+                Cart onSale = new Cart("On Sale");
+                Item eggs = new Item("eggs", 5, 1, false);
+                Item milk = new Item("milk", 5, 2, false);
+                Item noodles = new Item("noodles", 3, 3, false);
+                cart.addItem(eggs);
+                cart.addItem(milk);
+                cart.addItem(noodles);
+                Item chips = new Item("chips", 3, 1, true);
+                Item chicken = new Item("chicken", 10, 2, true);
+                cart.addItem(chips);
+                cart.addItem(chicken);
+                onSale.getSaleSize();
     }
 }
